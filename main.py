@@ -2,13 +2,15 @@ import Utils as u
 from Cliente import Cliente
 from tkinter import Tk
 from tkinter.filedialog import askopenfilename
+import sys
 
 
 
-Tk().withdraw() # we don't want a full GUI, so keep the root window from appearing
-filename = askopenfilename() # show an "Open" dialog box and return the path to the selected file
+Tk().withdraw() 
+filename = askopenfilename() # Chiediamo all'utente di aprire il file
 
-depot, clientiL, clientiB, savingsL, savingsB, nClienti, k = u.prepareProblem(filename)
+depot, clientiL, clientiB, savingsL, savingsB, nClienti, k = u.prepareProblem(filename) # otteniamo i dati dal file
 
-for saving in savingsB:
-  print(str(saving[0][0].name) + " " + str(saving[0][1].name) + " " + str(saving[1]))
+if("debug" in sys.argv):# se l'utente ha chiesto il debug
+  for saving in savingsB:# controlliamo che i savings siano stati ordinati correttamente
+    print(str(saving[0][0].name) + " " + str(saving[0][1].name) + " " + str(saving[1]))
