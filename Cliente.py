@@ -1,6 +1,8 @@
+from math import sqrt
+
 class Cliente:
 
-  def init(self, name = 0, x = 0, y = 0, consegna = 0, ritiro = 0, isDepot=False):
+  def __init__(self, name = 0, x = 0, y = 0, consegna = 0, ritiro = 0, isDepot=False):
     self.name = name
     self.x = x
     self.y = y
