@@ -73,6 +73,12 @@ def searchRoute(c1, c2, routes):
             return route
     return None
 
+def searchSaving(c,savings):
+    for s in savings:
+        if(c == s[0][0]):
+            return s
+    return None
+
 def quantity(route):
     sum = 0
     for c in route:

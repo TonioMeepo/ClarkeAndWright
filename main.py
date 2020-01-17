@@ -20,7 +20,7 @@ if("debug" in sys.argv):# se l'utente ha chiesto il debug
 
 
 initialRoutesL = u.getInitialRoutes(depot, clientiL)
-routes_l = ClarkeWrightParallel(depot, clientiL, savingsL, initialRoutesL, k, capacity)
+routes_l = ClarkeWrightSequential(depot, clientiL, savingsL, initialRoutesL, k, capacity)
 
 if("debug" in sys.argv):
   print()
@@ -31,7 +31,7 @@ if("debug" in sys.argv):
 
 
 initialRoutesB = u.getInitialRoutes(depot, clientiB)
-routes_b = ClarkeWrightParallel(depot, clientiB, savingsB, initialRoutesB, k, capacity)
+routes_b = ClarkeWrightSequential(depot, clientiB, savingsB, initialRoutesB, k, capacity)
 
 if("debug" in sys.argv):
   print()
