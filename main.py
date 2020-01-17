@@ -11,7 +11,7 @@ from ClarkeWrightSequential import ClarkeWrightSequential
 Tk().withdraw() 
 filename = askopenfilename() # Chiediamo all'utente di aprire il file
 
-depot, clientiL, clientiB, savingsL, savingsB, nClienti, k = u.prepareProblem(filename) # otteniamo i dati dal file
+depot, clientiL, clientiB, savingsL, savingsB, nClienti, k, capacity = u.prepareProblem(filename) # otteniamo i dati dal file
 
 if("debug" in sys.argv):# se l'utente ha chiesto il debug
   for saving in savingsB:# controlliamo che i savings siano stati ordinati correttamente
@@ -19,4 +19,5 @@ if("debug" in sys.argv):# se l'utente ha chiesto il debug
   print(dt.now())
 
 
-
+initialRoutesL = u.getInitialRoutes(depot, clientiL)
+ClarkeWrightParallel(depot, clientiL, savingsL, initialRoutesL, k, capacity)

@@ -33,7 +33,7 @@ def prepareProblem(filename = ''):
 
     linea = inputFile.readline().split('   ')
     depot = Cliente(name = 0,x=int(linea[0]),y=int(linea[1]),isDepot=True)
-
+    capacity = linea[3]
     for i in range(nClienti):
         linea = inputFile.readline().split('   ')
         if(int(linea[3]) == 0):
@@ -59,4 +59,10 @@ def prepareProblem(filename = ''):
 
 
     savingsB = sortSavings(savingsB)
-    return depot, clientiL, clientiB, savingsL, savingsB, nClienti, k
+    return depot, clientiL, clientiB, savingsL, savingsB, nClienti, k, capacity
+
+def getInitialRoutes(depot, clienti):
+    routes = []
+    for cliente in clienti:
+        routes.append([depot, cliente, depot])
+    return routes
