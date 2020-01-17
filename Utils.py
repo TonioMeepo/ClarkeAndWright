@@ -33,7 +33,7 @@ def prepareProblem(filename = ''):
 
     linea = inputFile.readline().split('   ')
     depot = Cliente(name = 0,x=int(linea[0]),y=int(linea[1]),isDepot=True)
-    capacity = linea[3]
+    capacity = int(linea[3])
     for i in range(nClienti):
         linea = inputFile.readline().split('   ')
         if(int(linea[3]) == 0):
@@ -66,3 +66,16 @@ def getInitialRoutes(depot, clienti):
     for cliente in clienti:
         routes.append([depot, cliente, depot])
     return routes
+
+def searchRoute(c1, c2, routes):
+    for route in routes:
+        if((route[0] == c1 and route[1] == c2 ) or (route[-2] == c1 and route[-1] == c2)):
+            return route
+    return None
+
+def quantity(route):
+    sum = 0
+    for c in route:
+        if(not c.isDepot):
+            sum += c.consegna if c.linehaul else c.ritiro
+    return sum

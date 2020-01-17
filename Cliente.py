@@ -6,6 +6,7 @@ class Cliente:
     self.name = name
     self.x = x
     self.y = y
+    self.isDepot= isDepot
     if(consegna == 0):
       self.linehaul = False
     else:
