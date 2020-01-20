@@ -7,7 +7,7 @@ from datetime import datetime as dt
 from ClarkeWrightParallel import ClarkeWrightParallel
 from ClarkeWrightSequential import ClarkeWrightSequential
 
-
+#prova
 Tk().withdraw() 
 filename = askopenfilename() # Chiediamo all'utente di aprire il file
 
