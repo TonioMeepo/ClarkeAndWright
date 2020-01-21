@@ -85,3 +85,74 @@ def quantity(route):
         if(not c.isDepot):
             sum += c.consegna if c.linehaul else c.ritiro
     return sum
+
+def forcedCombine(routes, k, capacity):
+    r = routes
+    mixed = True
+    while(mixed):
+        mixed = False
+        routes = r
+        check = [False for i in range(len(routes))]
+        for i in range(len(routes)):
+            for j in range(len(routes)):
+                if (j!=i and (not check[i]and not check[j] )):
+                    newRoute = routes[i][:-1] + routes[j][1:]
+                    if (quantity(newRoute)<=capacity):
+                        r.remove(routes[i])
+                        r.remove(routes[j])
+                        r.append(newRoute)
+                        check.append(False)
+                        check[i] = True
+                        check[j] = True
+                        mixed = True
+                        if(len(r)<=k):
+                            return r
+    if(len(r)>k):
+            print("Impossible")
+    return r
+
+def cost(route):
+    somma = 0
+    for i in range(len(route)-1):
+        somma += route[i].distanza(route[i+1])
+    return somma
+        
+
+def sortByCost(x):
+    if len(x) <=1:
+        return x
+    result = []
+    mid = int(len(x) / 2)
+    y = sortByCost(x[:mid])
+    z = sortByCost(x[mid:])
+    i = 0
+    j = 0
+    while i < len(y) and j < len(z):
+        if cost(y[i]) > cost(z[j]):
+            result.append(z[j])
+            j += 1
+        else:
+            result.append(y[i])
+            i += 1
+    result += y[i:]
+    result += z[j:]
+    return result
+
+
+def merge(routes_c,routes_r):
+    dist = []
+    result = []
+    usati = []
+    for c in routes_c:
+        for r in routes_r:
+            dist.append(((c,r),c[-2].distanza(r[1])))
+    dist = sortSavings(dist)[::-1]
+
+    for d in dist:
+        if (d[0][0] not in usati and d[0][1] not in usati):
+            result.append(d[0][0][:-2]+d[0][1][1:])
+            usati.append(d[0][0])
+            usati.append(d[0][1])
+    return result
+
+                

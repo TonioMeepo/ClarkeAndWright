@@ -22,20 +22,18 @@ if("debug" in sys.argv):# se l'utente ha chiesto il debug
 initialRoutesL = u.getInitialRoutes(depot, clientiL)
 routes_l = ClarkeWrightSequential(depot, clientiL, savingsL, initialRoutesL, k, capacity)
 
-if("debug" in sys.argv):
-  print()
-  print("Linehaul")
-  print("Capacity: " + str(capacity) + "  MaxQuantity: " + str(max(list(map(lambda x : u.quantity(x), routes_l)))) + "  #vehicles: " + str(k) + "  #Routes: " + str(len(routes_l)))
-  for route in routes_l:
-    print(str(list(map(lambda x : x.name,route))) + " " + str(u.quantity(route)))
-
 
 initialRoutesB = u.getInitialRoutes(depot, clientiB)
 routes_b = ClarkeWrightSequential(depot, clientiB, savingsB, initialRoutesB, k, capacity)
 
+
+
+routes = u.merge(routes_l,routes_b)
+
+
 if("debug" in sys.argv):
   print()
   print("Backhaul")
-  print("Capacity: " + str(capacity) + "  MaxQuantity: " + str(max(list(map(lambda x : u.quantity(x), routes_b)))) + "  #vehicles: " + str(k) + "  #Routes: " + str(len(routes_b)))
-  for route in routes_b:
-    print(str(list(map(lambda x : x.name,route))) + " " + str(u.quantity(route)))
+  print("Capacity: " + str(capacity) + "  #vehicles: " + str(k) + "  #Routes: " + str(len(routes)))
+  for route in routes:
+    print(str(list(map(lambda x : x.name,route))) + " " + str(u.cost(route)))

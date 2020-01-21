@@ -37,4 +37,26 @@ def ClarkeWrightSequential(depot, clienti, savings = [], routes = [], k = 0, cap
             r = None
         else:
             r=routes.pop()
-    return result
+    
+    del routes
+    routes = u.sortByCost(result)
+    if (len(routes)>k):
+        routes = u.forcedCombine(routes,k,capacity)
+    
+    routes = u.sortByCost(routes)
+    while(len(routes)<k):
+        r = routes.pop()
+        
+        half = u.cost(r)/2
+        acc=0
+        i=0
+        while(acc<half):
+            acc = u.cost(r[:i])
+            i+=1
+        r1 = r[:i]+[depot]
+        r2 = [depot]+r[i:]
+        routes.append(r1)
+        routes.append(r2)
+        routes= u.sortByCost(routes)
+
+    return routes
