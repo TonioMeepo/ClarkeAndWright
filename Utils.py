@@ -119,6 +119,7 @@ def cost(route):
         
 
 def sortByCost(x):
+    #ascendente
     if len(x) <=1:
         return x
     result = []
@@ -141,7 +142,7 @@ def sortByCost(x):
 
 def merge(routes_c,routes_r):
     dist = []
-    result = []
+    result = routes_c
     usati = []
     for c in routes_c:
         for r in routes_r:
@@ -150,6 +151,7 @@ def merge(routes_c,routes_r):
 
     for d in dist:
         if (d[0][0] not in usati and d[0][1] not in usati):
+            result.remove(d[0][0])
             result.append(d[0][0][:-2]+d[0][1][1:])
             usati.append(d[0][0])
             usati.append(d[0][1])
