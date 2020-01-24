@@ -1,0 +1,15 @@
+Soluzione del problema A3
+Route:0
+0 8 9 22 24 17 15 0 
+Costo route:48013.55043845516
+Route:1
+0 20 7 14 12 13 25 10 21 16 23 0 
+Costo route:115470.06336434728
+Route:2
+0 11 6 19 4 2 5 3 1 0 
+Costo route:112597.74028474677
+
+Numero di route: 3
+Costo totale:276081.35408754926
+Errore relativo: 0.6895526702827286
+Tempo di esecuzione: 0.003988981246948242

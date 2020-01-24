@@ -1,0 +1,18 @@
+Soluzione del problema E3
+Route:0
+0 34 23 37 21 33 0 
+Costo route:19487.166368124846
+Route:1
+0 43 32 36 27 22 44 0 
+Costo route:29810.56202743118
+Route:2
+0 40 16 38 18 17 42 26 29 2 8 13 5 10 11 0 
+Costo route:122458.64336675715
+Route:3
+0 31 35 41 25 39 24 30 45 19 3 7 9 14 15 4 6 12 1 0 
+Costo route:138059.14348223794
+
+Numero di route: 4
+Costo totale:309815.5152445511
+Errore relativo: 0.49916294593775795
+Tempo di esecuzione: 0.004987239837646484

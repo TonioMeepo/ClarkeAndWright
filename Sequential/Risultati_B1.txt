@@ -1,0 +1,27 @@
+Soluzione del problema B1
+Route:0
+0 14 19 0 
+Costo route:22884.576655967023
+Route:1
+0 11 0 
+Costo route:25529.193485106418
+Route:2
+0 12 25 20 30 0 
+Costo route:46799.51130039053
+Route:3
+0 26 27 6 10 9 4 0 
+Costo route:66272.90353870939
+Route:4
+0 22 18 2 7 0 
+Costo route:47833.62173528976
+Route:5
+0 16 13 1 5 0 
+Costo route:59417.34822211538
+Route:6
+0 24 28 21 3 8 0 
+Costo route:39992.74531966973
+
+Numero di route: 7
+Costo totale:308729.9002572482
+Errore relativo: 0.29132466227726367
+Tempo di esecuzione: 0.00698089599609375

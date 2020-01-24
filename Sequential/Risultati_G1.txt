@@ -1,0 +1,33 @@
+Soluzione del problema G1
+Route:0
+0 52 56 18 34 16 0 
+Costo route:36110.00735416014
+Route:1
+0 37 38 48 33 22 0 
+Costo route:43925.83815914096
+Route:2
+0 29 14 23 46 42 0 
+Costo route:46905.706266357185
+Route:3
+0 45 31 55 21 24 54 0 
+Costo route:47867.4061598664
+Route:4
+0 39 20 13 53 44 0 
+Costo route:49788.44294280725
+Route:5
+0 15 47 50 57 49 0 
+Costo route:57072.35899029369
+Route:6
+0 27 26 40 4 8 2 11 7 0 
+Costo route:84900.13428185985
+Route:7
+0 17 36 51 30 6 5 3 1 12 10 0 
+Costo route:107292.40976975238
+Route:8
+0 25 43 41 32 9 0 
+Costo route:48114.355379507804
+
+Numero di route: 9
+Costo totale:521976.65930374566
+Errore relativo: 0.7041019741818497
+Tempo di esecuzione: 0.23337459564208984

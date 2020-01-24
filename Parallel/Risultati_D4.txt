@@ -1,0 +1,21 @@
+Soluzione del problema D4
+Route:0
+0 34 29 18 0 
+Costo route:31215.93869582982
+Route:1
+0 16 11 9 37 21 30 14 0 
+Costo route:41367.68188240581
+Route:2
+0 15 20 27 17 36 22 12 0 
+Costo route:53994.681895011265
+Route:3
+0 10 25 35 19 38 28 2 0 
+Costo route:40321.57289334448
+Route:4
+0 32 26 31 23 24 8 4 5 1 3 6 7 0 
+Costo route:97639.7042430704
+
+Numero di route: 5
+Costo totale:264539.57960966177
+Errore relativo: 0.28522085783387313
+Tempo di esecuzione: 0.00698089599609375

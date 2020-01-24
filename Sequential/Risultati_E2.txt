@@ -1,0 +1,18 @@
+Soluzione del problema E2
+Route:0
+0 31 22 33 34 23 32 28 0 
+Costo route:45923.3646358481
+Route:1
+0 29 21 24 30 25 45 41 35 39 37 18 0 
+Costo route:135814.83389305635
+Route:2
+0 20 38 43 44 17 2 10 5 15 11 8 13 7 0 
+Costo route:175979.5136927348
+Route:3
+0 16 40 42 36 27 3 12 1 14 4 6 9 0 
+Costo route:92722.26044970575
+
+Numero di route: 4
+Costo totale:450439.972671345
+Errore relativo: 1.1220842665530262
+Tempo di esecuzione: 0.015957355499267578

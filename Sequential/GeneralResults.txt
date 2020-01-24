@@ -1,0 +1,2 @@
+Errore relativo medio: 0.9049410213288674
+Tempo di esecuzione medio: 0.6419603277425296

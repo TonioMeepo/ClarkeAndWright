@@ -1,0 +1,30 @@
+Soluzione del problema A1
+Route:0
+0 18 0 
+Costo route:15434.29233881489
+Route:1
+0 15 11 0 
+Costo route:16534.330332701637
+Route:2
+0 22 20 0 
+Costo route:30123.865170064797
+Route:3
+0 8 25 13 0 
+Costo route:34520.23179768586
+Route:4
+0 7 21 16 0 
+Costo route:36978.21659825982
+Route:5
+0 6 23 19 0 
+Costo route:37068.30130698465
+Route:6
+0 14 12 3 4 0 
+Costo route:45793.32127867105
+Route:7
+0 17 24 1 2 5 0 
+Costo route:40241.81258381264
+
+Numero di route: 8
+Costo totale:256694.37140699534
+Errore relativo: 0.116615937495086
+Tempo di esecuzione: 0.003988742828369141

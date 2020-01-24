@@ -1,0 +1,27 @@
+Soluzione del problema D3
+Route:0
+0 15 0 
+Costo route:4235.625101446067
+Route:1
+0 33 35 38 19 25 0 
+Costo route:34608.891497259676
+Route:2
+0 17 22 31 26 0 
+Costo route:57105.701312519
+Route:3
+0 27 16 10 28 21 0 
+Costo route:61009.37446840534
+Route:4
+0 20 23 24 36 13 12 0 
+Costo route:76282.7948735209
+Route:5
+0 11 14 37 30 2 3 7 1 0 
+Costo route:108476.5249806291
+Route:6
+0 32 18 29 5 8 4 6 0 
+Costo route:78395.4943422637
+
+Numero di route: 7
+Costo totale:420114.4065760438
+Errore relativo: 0.7542849543218563
+Tempo di esecuzione: 0.02293848991394043

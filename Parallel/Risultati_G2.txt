@@ -1,0 +1,24 @@
+Soluzione del problema G2
+Route:0
+0 52 18 34 25 41 56 16 54 0 
+Costo route:37519.97204125224
+Route:1
+0 40 26 27 28 17 35 0 
+Costo route:46142.56071380736
+Route:2
+0 53 43 19 46 38 33 22 48 0 
+Costo route:47143.77314419274
+Route:3
+0 51 24 55 31 45 21 36 30 0 
+Costo route:57644.8432480037
+Route:4
+0 32 37 29 14 39 23 42 8 9 0 
+Costo route:47455.11162161293
+Route:5
+0 44 49 47 50 15 20 2 11 7 4 6 5 10 3 1 12 0 
+Costo route:127389.22649756922
+
+Numero di route: 6
+Costo totale:363295.4872664382
+Errore relativo: 0.4801744095992039
+Tempo di esecuzione: 0.009972333908081055
