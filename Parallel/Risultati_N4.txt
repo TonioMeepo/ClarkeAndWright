@@ -28,6 +28,7 @@ Route:8
 Costo route:124404.29880618403
 
 Numero di route: 9
+Numero di mezzi: 10
 Costo totale:636387.4393066273
 Errore relativo: 0.611972601260999
-Tempo di esecuzione: 0.06283187866210938
+Tempo di esecuzione: 0.09973812103271484

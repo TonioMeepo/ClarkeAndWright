@@ -19,6 +19,7 @@ Route:5
 Costo route:163477.88956137458
 
 Numero di route: 6
+Numero di mezzi: 7
 Costo totale:863441.5289199587
 Errore relativo: 1.2448276524297226
-Tempo di esecuzione: 1.1130247116088867
+Tempo di esecuzione: 1.2486228942871094

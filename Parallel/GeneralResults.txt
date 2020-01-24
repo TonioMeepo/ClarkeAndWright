@@ -1,2 +1,3 @@
+Numero di mezzi: 8
 Errore relativo medio: 0.4443156936066496
-Tempo di esecuzione medio: 0.02804118297139152
+Tempo di esecuzione medio: 0.030294918623126922
