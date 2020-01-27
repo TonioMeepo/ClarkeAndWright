@@ -1,5 +1,6 @@
 from Cliente import Cliente
 
+
 #Method used to sort saving in a non increasing fashion
 def sortSavings(x):
     if len(x) <=1:

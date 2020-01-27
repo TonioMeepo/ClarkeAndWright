@@ -9,11 +9,13 @@ import glob
 import os
 from statistics import mean
 import pandas as pd
+import matplotlib.pyplot as plt
 
 s_errori = []
 s_tempi = []
 s_erroreMedio = 0
 s_tempoMedio = 0
+s_costiTot = []
 
 names = []
 dimensioniProb = []
@@ -22,6 +24,8 @@ p_errori = []
 p_tempi = []
 p_erroreMedio = 0
 p_tempoMedio = 0
+p_costiTot = []
+bestCosti=[]
 
 path = "C:/Users/marti/Documents/ClarkeAndWright/Instances/"
 filenames = glob.glob(path + '*.txt')
@@ -110,6 +114,7 @@ for filename in filenames:
   for i in range(8):
     infile.readline()
   costoMigliore = int(infile.readline().split(' ')[-1].split(".")[0])
+  bestCosti.append(costoMigliore)
   infile.close()
 
   outfile = open("./Sequential/Risultati_"+instanceName+".txt","w")
@@ -132,6 +137,7 @@ for filename in filenames:
   s_errori.append(s_erroreRelativo)
   s_tempi.append(s_elapsed_time)
   dimensioniProb.append(k)
+  s_costiTot.append(s_costoTot)
 
   outfile = open("./Parallel/Risultati_"+instanceName+".txt","w")
   outfile.write("Soluzione del problema "+instanceName+"\n")
@@ -152,6 +158,7 @@ for filename in filenames:
   outfile.close()
   p_errori.append(p_erroreRelativo)
   p_tempi.append(p_elapsed_time)
+  p_costiTot.append(p_costoTot)
   
 
 df = pd.DataFrame(list(zip(*[names,p_errori,p_tempi,s_errori,s_tempi,dimensioniProb]))).add_prefix('Col')
@@ -168,3 +175,25 @@ meanFile.write("Errore relativo medio: "+str(mean(p_errori)))
 meanFile.write("\nTempo di esecuzione medio: "+str(mean(p_tempi)))
 meanFile.close()
 
+plt.figure(figsize=(20,16))
+plt.plot(s_errori,'b',label='Sequential')
+plt.plot(p_errori,'r',label='Parallel')
+plt.legend()
+plt.ylabel('Errore')
+plt.xticks(range(61),names)
+plt.grid()
+plt.xlabel('Dimensione istanza')
+plt.savefig('plotErrore.png')
+plt.show()
+
+plt.figure(figsize=(20,16))
+plt.plot(s_costiTot,'b',label='Sequential')
+plt.plot(p_costiTot,'r',label='Parallel')
+plt.plot(bestCosti,'g', label = 'Best Solution')
+plt.legend()
+plt.ylabel('Costo totale')
+plt.grid()
+plt.xticks(range(61),names)
+plt.xlabel('Dimensione istanza')
+plt.savefig('plotCosto.png')
+plt.show()
