@@ -31,4 +31,4 @@ Numero di route: 9
 Numero di mezzi: 10
 Costo totale:664286.5074405994
 Errore relativo: 0.5895976688951303
-Tempo di esecuzione: 0.08776664733886719
+Tempo di esecuzione: 1.7470762729644775
